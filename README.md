@@ -14,11 +14,11 @@ Repositori ini memuat berkas proposal, perancangan pembelajaran mesin, serta dok
 
 Struktur direktori dokumentasi pada folder `docs/` dirinci sebagai berikut:
 
-- [docs/09_LAMPIRAN_B.md](docs/09_LAMPIRAN_B.md)
+- [09_LAMPIRAN_B.md](09_LAMPIRAN_B.md)
   Formulir pengajuan ide checkpoint 1 yang memuat rumusan target klasifikasi multikelas, daftar tautan dataset Kaggle, rencana tiga model, mitigasi risiko etika privasi, dan referensi ilmiah.
-- [docs/09_minggu9.md](docs/09_minggu9.md)
+- [09_minggu9.md](09_minggu9.md)
   Panduan capaian tugas dan kriteria checkpoint tahap awal untuk perumusan masalah pembelajaran dan alur lifecycle L-M-O-P.
-- [docs/Laporan_Proyek_ML_LMOP.md](docs/Laporan_Proyek_ML_LMOP.md)
+- [Laporan_Proyek_ML_LMOP.md](Laporan_Proyek_ML_LMOP.md)
   Draf utama template laporan komprehensif dari Bab 1 hingga Bab 10 yang mencakup seluruh alur siklus hidup proyek secara ilmiah.
 
 ---
