@@ -2,7 +2,7 @@
 **Judul Proyek:**  
 ["Klasifikasi Tingkat Kepadatan Lalu Lintas Perkotaan Menggunakan Convolutional Neural Network (CNN) dan Transfer Learning Berbasis Citra CCTV"]
 
-**Nama Mahasiswa:** [Muhammad Rifqi Maulana / 244311018 <br/> Vicky Rizkyanto / 244311030]  
+**Nama Mahasiswa:** [Muhammad Rifqi Maulana / 244311018 - Vicky Rizkyanto / 244311030]  
 **NIM:** [244311018]  
 **Program Studi:** [Teknologi Rekayasa Perangkat Lunak]  
 **Mata Kuliah:** [Data Science]  
