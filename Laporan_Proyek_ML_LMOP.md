@@ -56,15 +56,10 @@ Pada proyek ini, mahasiswa diharapkan dapat:
 ## 2. PROJECT OVERVIEW  **[L]**
 
 ### 2.1 Latar Belakang
-**Isi bagian ini dengan:**
-- Mengapa proyek ini penting?
-- Permasalahan umum pada domain terkait (misal: kesehatan, pendidikan, keuangan, pertanian, NLP, computer vision, dll.)
-- Manfaat proyek untuk pengguna, bisnis, atau penelitian
-- Studi literatur atau referensi ilmiah (minimal 1–2 sumber wajib)
-- Keterkaitan masalah dengan SDGs yang dipilih (dijabarkan di Bab 2.2)
+Kemacetan lalu lintas perkotaan merupakan permasalahan krusial yang berdampak langsung pada efisiensi mobilitas masyarakat, peningkatan emisi gas rumah kaca akibat kendaraan yang berhenti atau berjalan lambat, serta pemborosan energi. Pemantauan arus lalu lintas secara konvensional seringkali memerlukan biaya operasional yang tinggi dan kurang adaptif terhadap dinamika jalan raya secara real-time. Melalui pemanfaatan teknologi Computer Vision dan Deep Learning, citra tangkapan kamera pengawas (CCTV) di jalan raya dapat dianalisis secara otomatis untuk mengklasifikasikan tingkat kepadatan arus lalu lintas. Proyek ini memberikan manfaat nyata bagi instansi pengelola transportasi perkotaan dalam mengambil keputusan cepat untuk manajemen rekayasa lalu lintas serta membantu pengguna jalan dalam menghindari titik-titik kemacetan.
 
-**Contoh referensi (berformat APA/IEEE):**
-> Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning*. MIT Press.
+> Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep Learning. MIT Press.
+> LeCun, Y., Bengio, Y., & Hinton, G. (2015). Deep learning. Nature, 521(7553), 436–444.
 
 **[Jelaskan konteks dan latar belakang proyek]**
 
@@ -74,17 +69,17 @@ Ide proyek **berasal dari mahasiswa** dan harus selaras dengan **salah satu** da
 
 | Komponen | Pertanyaan Panduan | Jawaban Anda |
 |----------|--------------------|--------------|
-| **SDG yang dipilih** | Goal nomor berapa dan apa namanya? | [ ... ] |
-| **Target SDG** | Target (misal 3.4, 13.1) mana yang paling relevan? | [ ... ] |
-| **Masalah nyata** | Masalah konkret apa yang diangkat? Siapa yang terdampak? | [ ... ] |
-| **Peran ML** | Mengapa ML/DL cocok? Apa keputusan atau proses yang dibantu? | [ ... ] |
-| **Indikator kontribusi** | Bagaimana hasil model berkontribusi pada target SDG (langsung/tidak langsung)? | [ ... ] |
-| **Pertimbangan etika** | Risiko bias, privasi, atau dampak salah prediksi? | [ ... ] |
+| **SDG yang dipilih** | Goal nomor berapa dan apa namanya? | [ SDG 11 – Kota dan Permukiman yang Berkelanjutan ] |
+| **Target SDG** | Target (misal 3.4, 13.1) mana yang paling relevan? | [ Target 11.2 – Menyediakan akses ke sistem transportasi yang aman, terjangkau, mudah diakses, dan berkelanjutan bagi semua ] |
+| **Masalah nyata** | Masalah konkret apa yang diangkat? Siapa yang terdampak? | [ Kemacetan lalu lintas perkotaan yang meningkatkan waktu tempuh, emisi gas rumah kaca, dan pemborosan energi kendaraan ] |
+| **Peran ML** | Mengapa ML/DL cocok? Apa keputusan atau proses yang dibantu? | [ Memprediksi kategori kepadatan lalu lintas secara otomatis berbasis input citra visual (Multiclass Image Classification) ] |
+| **Indikator kontribusi** | Bagaimana hasil model berkontribusi pada target SDG (langsung/tidak langsung)? | [ Memberikan sistem deteksi dini kepadatan untuk mendukung manajemen lalu lintas yang responsif, mengurangi waktu kemacetan, dan menekan emisi karbon perkotaan ] |
+| **Pertimbangan etika** | Risiko bias, privasi, atau dampak salah prediksi? | [ Risiko penurunan performa pada cuaca ekstrim; privasi aman karena memproses tingkat penumpukan kendaraan secara agregat tanpa mengekstrak plat nomor atau identitas personal ] |
 
-**Sumber ide:** [Jelaskan dari mana ide muncul: pengalaman pribadi, lingkungan sekitar, isu lokal/nasional, dll.]
+**Sumber ide:** Diangkat dari pengamatan langsung terhadap kondisi kemacetan jalan raya perkotaan di Indonesia serta kebutuhan implementasi sistem cerdas pada bidang transportasi publik dan Smart City.
 
 ### 2.3 Ringkasan Alur Lifecycle Proyek
-Jelaskan dalam 1 paragraf pendek bagaimana proyek Anda melewati tahap L → M → O → P (dan iterasi apa yang direncanakan).
+Proyek ini dimulai dengan tahap Learning Problem untuk merumuskan klasifikasi kepadatan lalu lintas berdasarkan SDG 11, dilanjutkan dengan Model Design yang merancang model baseline, advanced machine learning, dan Convolutional Neural Network (Transfer Learning MobileNetV2), kemudian masuk ke tahap Optimization melalui pelatihan dan penyesuaian hyperparameter, serta ditutup dengan tahap Predict & Evaluate untuk mengukur performa model pada test set guna mendukung iterasi perbaikan lanjutan.
 
 **[Tulis ringkasan alur lifecycle proyek Anda]**
 
@@ -95,13 +90,13 @@ Jelaskan dalam 1 paragraf pendek bagaimana proyek Anda melewati tahap L → M �
 ### 3.1 Problem Statements
 Tuliskan 2–4 pernyataan masalah yang jelas dan spesifik.
 
-**Contoh (universal):**
-1. Model perlu mampu memprediksi nilai target dengan akurasi tinggi
-2. Sistem harus dapat mengidentifikasi pola pada citra secara otomatis
-3. Dataset memiliki noise sehingga perlu preprocessing yang tepat
-4. Dibutuhkan model deep learning yang mampu belajar representasi fitur kompleks
+1. Sistem pemantauan manual memerlukan waktu operasional yang lama dan rentan terhadap keterlambatan informasi penanganan kemacetan.
 
-**[Tulis problem statements Anda di sini]**
+2. Model machine learning perlu mampu mengklasifikasikan tingkat kepadatan arus lalu lintas berdasarkan citra CCTV secara akurat dan otomatis.
+
+3. Dataset citra CCTV memiliki variasi pencahayaan dan kondisi lingkungan sehingga memerlukan preprocessing serta arsitektur ekstraksi fitur yang tangguh.
+
+4. Dibutuhkan model deep learning berbasis Transfer Learning yang mampu mengenali pola representasi spasial yang kompleks pada kendaraan di jalan raya.
 
 ### 3.2 Formulasi Learning Problem (WAJIB)
 
@@ -109,22 +104,19 @@ Rumuskan masalah dalam kerangka *Learning Problem*:
 
 | Komponen | Pertanyaan Panduan | Jawaban Anda |
 |----------|--------------------|--------------|
-| **Target** | Apa yang diprediksi? Jenis tugas (klasifikasi biner/multikelas, regresi, forecasting, clustering, dll.)? | [ ... ] |
-| **Objective** | Apa yang dioptimalkan/diminimalkan secara matematis (misal: cross-entropy, MSE)? Metrik keberhasilan utama? | [ ... ] |
-| **Data** | Sumber, ukuran, jenis, dan asumsi tentang data (i.i.d.? distribusi train vs test?) | [ ... ] |
+| **Target** | Apa yang diprediksi? Jenis tugas (klasifikasi biner/multikelas, regresi, forecasting, clustering, dll.)? | [ Memprediksi kategori kepadatan lalu lintas (Sparse, Dense, Traffic Jam) berbasis input citra visual (Multiclass Image Classification) ] |
+| **Objective** | Apa yang dioptimalkan/diminimalkan secara matematis (misal: cross-entropy, MSE)? Metrik keberhasilan utama? | [ Meminimalkan Categorical Cross-Entropy Loss. Metrik utama: Akurasi (> 85%), Precision, Recall, dan F1-Score Macro ] |
+| **Data** | Sumber, ukuran, jenis, dan asumsi tentang data (i.i.d.? distribusi train vs test?) | [ Kaggle Traffic-Net Dataset (~4,400 citra RGB 224x224, format JPG/PNG, ukuran ~200 MB), diasumsikan independen dan terdistribusi identik (i.i.d.) ] |
 
 ### 3.3 Goals
 
-Tujuan harus spesifik, terukur, dan selaras dengan problem statement.
-**Contoh tujuan:**
-1. Membangun model ML untuk memprediksi variabel target dengan akurasi > 80%
-2. Mengukur performa tiga pendekatan model (baseline, advanced, deep learning)
-3. Menentukan model terbaik berdasarkan metrik evaluasi yang relevan
-4. Menghasilkan sistem yang dapat bekerja secara reproducible
+1. Membangun model machine learning dan deep learning untuk mengklasifikasikan tingkat kepadatan arus lalu lintas dengan akurasi target > 85%.
 
-> Sertakan minimal satu goal yang menunjukkan kontribusi terhadap target SDG yang dipilih (Bab 2.2).
+2. Mengukur dan membandingkan performa tiga pendekatan model (baseline Logistic Regression, advanced Random Forest + HOG, dan deep learning MobileNetV2).
 
-**[Tulis goals Anda di sini]**
+3. Menentukan model terbaik berdasarkan metrik evaluasi F1-Score dan akurasi yang relevan untuk skenario nyata.
+
+4. Menghasilkan sistem klasifikasi citra lalu lintas yang dapat bekerja secara reproducible untuk mendukung target SDG 11.2 dalam mewujudkan sistem transportasi perkotaan yang berkelanjutan.
 
 ### 3.4 Solution Approach  **[M]**
 
