@@ -124,53 +124,23 @@ Mahasiswa **WAJIB** menggunakan minimal **tiga model** dengan komposisi sebagai 
 #### **Model 1 – Baseline Model**
 Model sederhana sebagai pembanding dasar.
 **Pilihan model:**
-- Linear Regression (untuk regresi)
 - Logistic Regression (untuk klasifikasi)
-- K-Nearest Neighbors (KNN)
-- Decision Tree
-- Naive Bayes
-
-**[Jelaskan model baseline yang Anda pilih dan alasannya]**
+Logistic Regression dipilih sebagai model baseline karena kesederhanaan komputasinya, kemudahan interpretasi bobot koefisiennya, serta berfungsi sebagai tolok alamiah awal sebelum beralih ke model ekstraksi fitur spasial yang lebih kompleks.
 
 #### **Model 2 – Advanced / ML Model**
 Model machine learning yang lebih kompleks.
 **Pilihan model:**
 - Random Forest
-- Gradient Boosting (XGBoost, LightGBM, CatBoost)
-- Support Vector Machine (SVM)
-- Ensemble methods
-- Clustering (K-Means, DBSCAN) - untuk unsupervised
-- PCA / dimensionality reduction (untuk preprocessing)
-
-**[Jelaskan model advanced yang Anda pilih dan alasannya]**
+Random Forest dikombinasikan dengan ekstraksi fitur HOG dipilih karena mampu menangkap pola bentuk tepi dan struktur objek kendaraan dari citra sebelum dilakukan proses ensemble decision tree, sehingga memberikan performa yang lebih baik daripada model linear sederhana.
 
 #### **Model 3 – Deep Learning Model (WAJIB)**
 Model deep learning yang sesuai dengan jenis data.
 **Pilihan Implementasi (pilih salah satu sesuai dataset):**
-**A. Tabular Data:**
-- Multilayer Perceptron (MLP) / Neural Network
-- Minimum: 2 hidden layers
-- Contoh: prediksi harga, klasifikasi binary/multiclass
 
 **B. Image Data:**
 - CNN sederhana (minimum 2 convolutional layers) **ATAU**
 - Transfer Learning (ResNet, VGG, MobileNet, EfficientNet) - **recommended**
 - Contoh: klasifikasi gambar, object detection
-
-**C. Text Data:**
-- LSTM/GRU (minimum 1 layer) **ATAU**
-- Embedding + Dense layers **ATAU**
-- Pre-trained model (BERT, DistilBERT, Word2Vec)
-- Contoh: sentiment analysis, text classification
-
-**D. Time Series:**
-- LSTM/GRU untuk sequential prediction
-- Contoh: forecasting, anomaly detection
-
-**E. Recommender Systems:**
-- Neural Collaborative Filtering (NCF)
-- Autoencoder-based Collaborative Filtering
-- Deep Matrix Factorization
 
 **Minimum Requirements untuk Deep Learning:**
 - ✅ Model harus training minimal 10 epochs
@@ -183,9 +153,7 @@ Model deep learning yang sesuai dengan jenis data.
 - ❌ Model tidak di-train (hanya define arsitektur)
 - ❌ Tidak ada evaluasi pada test set
 
-**[Jelaskan model deep learning yang Anda pilih dan alasannya]**
-
----
+Arsitektur Transfer Learning menggunakan MobileNetV2 dipilih karena efisiensi arsitekturnya yang menggunakan inverted residuals dan linear bottlenecks, sangat optimal untuk klasifikasi citra skala menengah dengan keterbatasan sumber daya komputasi namun tetap menghasilkan representasi fitur visual yang sangat kuat.
 
 ## 4. DATA UNDERSTANDING  **[L]**
 ### 4.1 Informasi Dataset
