@@ -23,6 +23,17 @@ Struktur direktori dokumentasi pada folder `docs/` dirinci sebagai berikut:
 
 ---
 
+## NOTEBOOK EKSPERIMEN
+
+Struktur direktori kode dan notebook pada folder `notebooks/` dirinci sebagai berikut:
+
+* [notebooks/01_learning_problem_eda.ipynb](01_learning_problem_eda.ipynb)
+  Eksplorasi data awal (EDA), pembentukan kelas target tingkat kepadatan lalu lintas (*Lancar*, *Padat*, *Macet*), pengecekan kondisi dataset, serta visualisasi pola jam sibuk dan korelasi fitur.
+* [notebooks/02_data_preparation.ipynb](02_data_preparation.ipynb)
+  Pembersihan data (*data cleaning*), rekayasa fitur siklikal waktu (*feature engineering*), pembagian dataset secara *stratified* (60% Train, 20% Val, 20% Test), serta transformasi fitur bebas *data leakage*.
+
+---
+
 ## RINGKASAN PROYEK
 
 Proyek riset ini bertujuan memitigasi dampak kemacetan lalu lintas perkotaan melalui klasifikasi tingkat kepadatan jalan raya berbasis data tabular sensor dan meteorologi. Pendekatan komputasi memanfaatkan tiga tingkatan kompleksitas model secara bertahap:
