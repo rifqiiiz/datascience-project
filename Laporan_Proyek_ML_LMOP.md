@@ -148,7 +148,7 @@ Mengikuti prinsip pemilihan keluarga model secara bertahap (mulai dari model lin
 | `traffic_volume` | Integer | Jumlah kendaraan per jam (dikonversi menjadi label target `density_class`) | `5545` (Macet), `3100` (Padat), `850` (Lancar) |
 
 ### 4.3 Kondisi Data
-* **Missing Values:** Terdapat 0 nilai kosong (`NaN`) pada seluruh kolom (0%). Kolom `holiday` berisi string `"None"` untuk hari non-libur yang merupakan kategori valid.
+* **Missing Values:** Terdapat 48143 nilai kosong (`NaN`) pada Kolom `holiday`.
 * **Duplicate Data:** Ditemukan 17 baris duplikat pada cap waktu `date_time` yang identik akibat pencatatan deskripsi cuaca ganda pada jam yang sama.
 * **Outliers:** Terdapat pencilan ekstrem pada fitur `temp` bernilai $0\text{ K}$ (kesalahan bacaan sensor suhu, 10 baris) dan fitur `rain_1h` sebesar $9831.3\text{ mm}$ pada satu baris observasi.
 * **Imbalanced Data:** Dengan membagi `traffic_volume` berdasarkan ambang operasional jalan raya ($\le 2000$: Lancar, $2001–4500$: Padat, $> 4500$: Macet), rasio kelas target tergolong seimbang ($32.0\% : 36.0\% : 32.0\%$).
