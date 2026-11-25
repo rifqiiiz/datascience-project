@@ -62,31 +62,25 @@
 
 ---
 
-## MINGGU 3 — [M + O + P] MODELING, OPTIMIZATION, EVALUATION & FINALISASI (BAB 6–SELESAI)
+## MINGGU 3 — [M] MODEL DESIGN: BASELINE & ADVANCED
 
-**Tujuan:** Merancang, melatih, mengoptimalkan, dan mengevaluasi tiga tingkat model (*Baseline*, *Advanced ML*, dan *Deep Learning* PyTorch) secara objektif serta menyelesaikan laporan akhir proyek beserta artefak repositori.
+**Tujuan:** Dua model pertama terlatih dan dijustifikasi berdasarkan hypothesis space dan inductive bias.
 
 **Tugas:**
-
-1. **Model Design & Optimization [M + O] (Bab 6):**
-   * Implementasikan **Model 1 (Baseline):** *Logistic Regression* (Scikit-Learn) sebagai tolok ukur performa awal.
-   * Implementasikan **Model 2 (Advanced ML):** *Random Forest Classifier* (Scikit-Learn) beserta penyetelan *hyperparameter* menggunakan *Validation Set*.
-   * Implementasikan **Model 3 (Deep Learning Tabular):** *Multilayer Perceptron* (`MLPModel` subclassing `torch.nn.Module` di **PyTorch**) minimal 2 *hidden layers* dengan aktivasi **ReLU**, `Dropout`, `nn.CrossEntropyLoss()`, *mini-batch* `DataLoader`, dan *optimizer* **Adam** ($\ge 10$ epochs).
-   * Catat kurva konvergensi (*training loss* vs *validation loss*) dan eksperimen optimasi (*learning rate*, regularisasi).
-2. **Predict & Evaluate [P] (Bab 7):**
-   * Evaluasi seluruh model terlatih pada **Test Set** (yang baru dibuka satu kali di tahap akhir) menggunakan metrik *Accuracy*, *Precision*, *Recall*, *F1-Score (Macro)*, dan *Confusion Matrix*.
-   * Lakukan analisis komparasi antar-model, *error analysis* pada sampel salah prediksi, serta refleksi *ML Lifecycle (L-M-O-P)*.
-3. **Finalisasi Laporan & Reproducibility (Bab 8–Selesai):**
-   * Lengkapi **Bab 8** (Kesimpulan, Saran, dan Kontribusi terhadap SDG 11.2), **Bab 9** (Daftar Pustaka), serta **Bab 10–12** (Lampiran Struktur Repositori, Panduan Reproduksi `requirements.txt`, dan Bukti Running).
-   * Commit notebook pemodelan dan evaluasi (`03_modeling_and_evaluation.ipynb`), simpan bobot model terbaik (`models/`), serta perbarui `README.md` dan laporan lengkap di GitHub.
+1. **Model 1 (Baseline):** pilih model sederhana, jelaskan teori, alasan, hypothesis space, dan inductive bias (Bab 6.1.1–6.1.2).
+2. Latih baseline, catat hyperparameter dan hasil pada validation set (Bab 6.1.3–6.1.5).
+3. **Model 2 (Advanced):** pilih model (Random Forest/XGBoost/SVM/dll.), jelaskan teori, keunggulan, kelemahan, hypothesis space, dan inductive bias (Bab 6.2.1–6.2.2).
+4. Latih model advanced dengan parameter awal (Bab 6.2.3).
+5. Bandingkan awal baseline vs advanced pada validation set.
+6. Commit notebook `03_model_design_baseline_ml`.
+7. Commit notebook `03_model_design_advanced_ml`.
 
 **Deliverable:**
-* Laporan lengkap dari Bab 6 sampai selesai (Bab 6–12)
-* Notebook `03_modeling_and_evaluation.ipynb` dengan output pelatihan, kurva loss PyTorch, dan hasil evaluasi akhir
-* Repositori GitHub terstruktur dan siap direproduksi (**Checkpoint Final**)
+- Bab 6.1 dan 6.2.1–6.2.3 selesai
+- Skor validasi baseline dan advanced
 
 **Checklist selesai:**
-* [ ] Ketiga model (Baseline, Advanced ML, Deep Learning PyTorch MLP) berhasil dilatih dan dibandingkan
-* [ ] Evaluasi akhir pada Test Set dilakukan hanya sekali tanpa *data leakage*
-* [ ] Analisis kesalahan (*error analysis*) dan keterkaitan hasil dengan SDG 11.2 dijelaskan
-* [ ] Seluruh kode, dokumentasi laporan lengkap (Bab 1–Selesai), dan `requirements.txt` terunggah rapi di GitHub
+- [ ] Alasan pemilihan model menyebut karakteristik data
+- [ ] Asumsi/inductive bias tiap model dijelaskan
+- [ ] Hasil validasi tercatat (bukan test set)
+- [ ] Asistensi **Checkpoint 2** dilakukan
